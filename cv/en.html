@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ijun Jang — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+  <div class="toolbar">
+    <a href="../">← Home</a>
+    <a href="Ijun_Jang_CV_EN.pdf">Download PDF</a>
+    <a href="ko.html">한국어 이력서</a>
+  </div>
+
+  <div class="page">
+    <header>
+      <h1>Ijun Jang</h1>
+      <div class="contact">
+        <a href="mailto:jangij0824@gmail.com">jangij0824@gmail.com</a><span class="sep">|</span>
+        <a href="https://jjun-0824.github.io">jjun-0824.github.io</a><span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/ijun-jang-421b31249/">LinkedIn</a><span class="sep">|</span>
+        <a href="https://scholar.google.com/citations?user=kGgmoOcAAAAJ">Google Scholar</a><span class="sep">|</span>
+        <a href="https://github.com/jjun-0824">GitHub</a>
+      </div>
+      <p class="interests"><b>Research interests:</b> LLM post-training, agentic reinforcement learning, knowledge distillation, efficient reasoning, on-device AI</p>
+    </header>
+
+    <h2>Education</h2>
+    <div class="item">
+      <div class="row"><span class="l">Seoul National University</span><span class="r">Mar 2024 – Feb 2026 · Seoul, Korea</span></div>
+      <div class="row sub"><span class="l">M.S. in Data Science (Advisor: Prof. Taesup Kim)</span></div>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">Sungkyunkwan University</span><span class="r">Mar 2019 – Feb 2024 · Seoul, Korea</span></div>
+      <div class="row sub"><span class="l">B.S. in Statistics · B.S. in Computer Science (double major)</span></div>
+    </div>
+
+    <h2>Work Experience</h2>
+    <div class="item">
+      <div class="row"><span class="l">Samsung Research, Samsung Electronics</span><span class="r">Mar 2026 – Present · Seoul, Korea</span></div>
+      <div class="row sub"><span class="l">AI Engineer, AI Core Team (Post-training)</span></div>
+      <ul>
+        <li>Train LLM agents with <b>agentic reinforcement learning</b> in simulated environments for multi-turn, tool-using tasks.</li>
+        <li>Build <b>synthetic data generation pipelines</b> that produce training tasks and data for agentic RL.</li>
+        <li>Develop <b>turn-level advantage estimation</b> for multi-turn RL, assigning credit to individual turns rather than whole trajectories.</li>
+        <li>Apply <b>on-policy distillation (OPD)</b> to shorten the model's reasoning length while preserving task performance.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">NAVER Cloud</span><span class="r">Oct 2025 – Jan 2026 · Seoul, Korea</span></div>
+      <div class="row sub"><span class="l">Research Intern, Alignment Learning Team</span></div>
+      <ul>
+        <li>Participated in the WBL project on LLM alignment.</li>
+        <li>Extended the in-house model evaluation pipeline to support the IFEval instruction-following benchmark.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">Mirae Asset Securities</span><span class="r">Dec 2022 – Jan 2023 · Seoul, Korea</span></div>
+      <div class="row sub"><span class="l">Data Science Intern, Data Science Team</span></div>
+      <ul>
+        <li>Analyzed website traffic data (Google Analytics) to find the critical path to the first stock trade for newly opened accounts.</li>
+      </ul>
+    </div>
+
+    <h2>Publications</h2>
+    <p class="note">* equal contribution</p>
+    <div class="pub">
+      <div class="t">Stable On-Policy Distillation via Adaptive Target Reformulation</div>
+      <div class="a"><b>Ijun Jang</b>, Jewon Yeom, Juan Yeo, Hyunggu Lim, Taesup Kim</div>
+      <div class="v">Findings of ACL 2026</div>
+      <ul>
+        <li>Mixed student logits into the teacher target to mitigate gradient explosion (forward KL) and mode collapse (reverse KL) in on-policy distillation.</li>
+        <li>Improved GSM8K accuracy from 35.1 to 39.9 over on-policy KD, with gains on code generation and summarization.</li>
+      </ul>
+    </div>
+    <div class="pub">
+      <div class="t">Beyond Case Law: Evaluating Structure-Aware Retrieval and Safety in Statute-Centric Legal QA</div>
+      <div class="a">Kyubyung Chae, Jewon Yeom, Jeongjae Park, Seunghyun Bae, <b>Ijun Jang</b>, Hyunbin Jin, Jinkwan Jang, Taesup Kim</div>
+      <div class="v">ACL 2026</div>
+      <ul>
+        <li>Collected 4,437 statute articles and 942 QA pairs; stored cross-article references as a graph database for an on-premise sLLM RAG system (+2.13%p win-rate with retrieval, +6.41%p with oracle documents).</li>
+      </ul>
+    </div>
+    <div class="pub">
+      <div class="t">Patch-level Kernel Alignment for Self-Supervised Dense Representation Learning</div>
+      <div class="a"><b>Ijun Jang*</b>, Juan Yeo*, Taesup Kim</div>
+      <div class="v">Under review</div>
+      <ul>
+        <li>Post-trained pretrained ViTs by aligning patch-level feature kernels between teacher and student, with augmentations designed for dense SSL.</li>
+        <li>State-of-the-art linear segmentation on Pascal VOC (81.8), COCO-Things (82.0), COCO-Stuff (62.2) and ADE20K (41.1) mIoU.</li>
+      </ul>
+    </div>
+
+    <h2>Awards</h2>
+    <div class="item">
+      <div class="row"><span class="l">Seoul Metropolitan Government Big Data Campus Contest, 2nd Place</span><span class="r">2023</span></div>
+      <ul><li>Crime-risk prediction by district, effectiveness analysis of security facilities, and safe-route recommendation.</li></ul>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">Mirae Asset Big Data Festival, 1st Place</span><span class="r">2022</span></div>
+      <ul><li>Automated ESG data extraction from report tables with an image-based table extraction model; corporate ESG grade prediction.</li></ul>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">SKKU Software Capstone Design Contest, 1st Place</span><span class="r">2022</span></div>
+      <ul><li>Scholarship information extraction with a BERT QA model and personalized scholarship recommendation.</li></ul>
+    </div>
+    <div class="item">
+      <div class="row"><span class="l">SKKU PBL (Project-Based Learning) Contest, 1st Place</span><span class="r">2022</span></div>
+      <ul><li>Built a medical information website providing information on medical investigators.</li></ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="kv">
+      <span class="k">Languages</span><span>Python, R, C/C++, SQL</span>
+      <span class="k">Frameworks</span><span>PyTorch, TensorFlow</span>
+    </div>
+  </div>
+</body>
+</html>

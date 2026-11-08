@@ -1,0 +1,70 @@
+/* Shared style for cv/en.html and cv/ko.html (also used to render the PDFs). */
+:root { --fg: #1a1a1a; --muted: #5f6368; --line: #c9ccd1; --accent: #1a4f9c; }
+* { box-sizing: border-box; }
+html { background: #eef0f3; }
+body {
+  margin: 0; color: var(--fg);
+  font-family: "Source Serif 4", "Noto Serif KR", Georgia, serif;
+  font-size: 10.6pt; line-height: 1.42;
+}
+:lang(ko) body, body:lang(ko) { font-family: "Noto Sans KR", "Source Serif 4", sans-serif; font-size: 10pt; line-height: 1.5; }
+a { color: var(--accent); text-decoration: none; }
+
+.toolbar {
+  max-width: 210mm; margin: 16px auto 0; padding: 0 4px;
+  display: flex; gap: 14px; flex-wrap: wrap;
+  font-family: "Inter", "Noto Sans KR", sans-serif; font-size: 14px;
+}
+.page {
+  background: #fff; max-width: 210mm; margin: 12px auto 32px;
+  padding: 15mm 16mm; box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+header { text-align: center; margin-bottom: 6px; }
+header h1 { font-size: 22pt; margin: 0; letter-spacing: .01em; }
+header h1 .sub { font-size: 13pt; font-weight: 400; color: var(--muted); margin-left: 6px; }
+.contact { margin-top: 3px; font-size: 9.6pt; color: var(--muted); }
+.contact a { color: var(--accent); }
+.contact .sep { margin: 0 6px; color: var(--line); }
+.interests { text-align: center; font-size: 9.6pt; margin: 6px 0 0; color: var(--fg); }
+
+h2 {
+  font-size: 11.5pt; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--accent); margin: 13px 0 6px; padding-bottom: 2px;
+  border-bottom: 1px solid var(--line);
+}
+:lang(ko) h2 { letter-spacing: .02em; }
+
+.item { margin: 0 0 7px; break-inside: avoid; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.row .l { font-weight: 700; }
+.row .r { color: var(--muted); font-size: 9.6pt; white-space: nowrap; }
+.row.sub .l { font-weight: 400; font-style: italic; }
+:lang(ko) .row.sub .l { font-style: normal; color: #333; }
+ul { margin: 2px 0 0; padding-left: 16px; }
+li { margin: 1px 0; }
+
+.pub { margin: 0 0 7px; break-inside: avoid; }
+.pub .t { font-weight: 700; }
+.pub .a { }
+.pub .a b { text-decoration: underline; text-underline-offset: 2px; }
+.pub .v { color: var(--muted); font-style: italic; }
+.pub ul { color: #333; }
+.note { font-size: 9pt; color: var(--muted); margin: -2px 0 5px; }
+
+.skills .row .l { font-weight: 700; min-width: 0; }
+.kv { display: grid; grid-template-columns: 92px 1fr; gap: 1px 10px; }
+.kv .k { font-weight: 700; }
+
+@page { size: A4; margin: 13mm 0; }
+@media print {
+  html { background: #fff; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; max-width: none; padding: 0 16mm; }
+}
+@media (max-width: 760px) {
+  .page { padding: 20px 16px; margin: 8px 8px 24px; }
+  .row { flex-direction: column; gap: 0; }
+  .row .r { white-space: normal; }
+  .toolbar { padding: 0 12px; }
+}
