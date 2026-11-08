@@ -87,35 +87,11 @@ h2 {
 
 /* publications */
 .pub {
-  display: flex; gap: 18px; margin-bottom: 14px; padding: 16px;
+  margin-bottom: 14px; padding: 16px 18px;
   border: 1px solid var(--line); border-radius: 12px;
   transition: border-color .15s, box-shadow .15s, transform .15s;
 }
 .pub:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 4px 14px rgba(0,0,0,.06); transform: translateY(-1px); }
-.venue {
-  flex: 0 0 92px; align-self: flex-start;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-height: 78px; border-radius: 10px; overflow: hidden; text-align: center;
-  color: #fff; line-height: 1.1; position: relative;
-}
-.v-conf { font-size: 19px; font-weight: 700; letter-spacing: .04em; padding-top: 10px; }
-.v-year { font-size: 13px; font-weight: 500; opacity: .9; margin-top: 3px; }
-.v-track {
-  margin-top: 8px; width: 100%; padding: 4px 0;
-  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  background: rgba(0,0,0,.18);
-}
-.venue.main { background: linear-gradient(135deg, #1d4ed8, #0f2a6b); }
-.venue.findings { background: linear-gradient(135deg, #3b82f6, #1e40af); }
-.venue.review {
-  background: transparent; color: #b45309; border: 1.5px dashed #f59e0b;
-}
-.venue.review .v-conf { font-size: 14px; padding-top: 14px; }
-.venue.review .v-track { background: #fef3c7; color: #92400e; letter-spacing: .04em; }
-@media (prefers-color-scheme: dark) {
-  .venue.review { color: #fbbf24; }
-  .venue.review .v-track { background: #3a2a0c; color: #fcd34d; }
-}
 .pub-title { font-weight: 600; font-size: 16.5px; line-height: 1.4; }
 .authors { font-size: 15px; margin-top: 2px; }
 .pub-venue { color: var(--muted); font-size: 14.5px; }
@@ -143,10 +119,6 @@ h2 {
   .meta { text-align: left; white-space: normal; }
   .meta > span { display: inline; }
   .meta > span + span::before { content: " · "; }
-  .pub { flex-direction: column; gap: 10px; padding: 14px; }
-  .venue { flex: none; flex-direction: row; min-height: 0; gap: 6px; padding: 0 0 0 12px; align-self: flex-start; border-radius: 999px; }
-  .v-conf, .venue.review .v-conf { font-size: 13px; padding: 5px 0; }
-  .v-year { font-size: 13px; margin: 0; }
-  .v-track { margin: 0; width: auto; padding: 6px 10px; font-size: 10px; align-self: stretch; display: flex; align-items: center; }
+  .pub { padding: 14px; }
   .date { flex-basis: 70px; }
 }
