@@ -86,18 +86,46 @@ h2 {
 .entry li { margin: 3px 0; }
 
 /* publications */
-.pub { display: flex; gap: 18px; margin-bottom: 22px; }
-.venue {
-  flex: 0 0 88px; align-self: flex-start; text-align: center;
-  background: var(--accent); color: #fff; border-radius: 6px;
-  font-size: 13px; font-weight: 600; line-height: 1.3; padding: 6px 4px;
+.pub {
+  display: flex; gap: 18px; margin-bottom: 14px; padding: 16px;
+  border: 1px solid var(--line); border-radius: 12px;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
 }
-.venue small { font-weight: 500; opacity: .9; }
-.venue.review { background: var(--chip); color: var(--muted); }
+.pub:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 4px 14px rgba(0,0,0,.06); transform: translateY(-1px); }
+.venue {
+  flex: 0 0 92px; align-self: flex-start;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 78px; border-radius: 10px; overflow: hidden; text-align: center;
+  color: #fff; line-height: 1.1; position: relative;
+}
+.v-conf { font-size: 19px; font-weight: 700; letter-spacing: .04em; padding-top: 10px; }
+.v-year { font-size: 13px; font-weight: 500; opacity: .9; margin-top: 3px; }
+.v-track {
+  margin-top: 8px; width: 100%; padding: 4px 0;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  background: rgba(0,0,0,.18);
+}
+.venue.main { background: linear-gradient(135deg, #1d4ed8, #0f2a6b); }
+.venue.findings { background: linear-gradient(135deg, #3b82f6, #1e40af); }
+.venue.review {
+  background: transparent; color: #b45309; border: 1.5px dashed #f59e0b;
+}
+.venue.review .v-conf { font-size: 14px; padding-top: 14px; }
+.venue.review .v-track { background: #fef3c7; color: #92400e; letter-spacing: .04em; }
+@media (prefers-color-scheme: dark) {
+  .venue.review { color: #fbbf24; }
+  .venue.review .v-track { background: #3a2a0c; color: #fcd34d; }
+}
 .pub-title { font-weight: 600; font-size: 16.5px; line-height: 1.4; }
 .authors { font-size: 15px; margin-top: 2px; }
 .pub-venue { color: var(--muted); font-size: 14.5px; }
-.tldr { margin: 4px 0 0; font-size: 14.5px; color: var(--muted); }
+.tldr { margin: 6px 0 0; font-size: 14.5px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-size: 12px; font-weight: 500; padding: 2px 9px; border-radius: 999px;
+  background: var(--chip); color: var(--muted);
+}
+.tag.first { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
 .footer {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
@@ -115,8 +143,10 @@ h2 {
   .meta { text-align: left; white-space: normal; }
   .meta > span { display: inline; }
   .meta > span + span::before { content: " · "; }
-  .pub { flex-direction: column; gap: 6px; }
-  .venue { flex: none; padding: 3px 10px; }
-  .venue br { display: none; }
+  .pub { flex-direction: column; gap: 10px; padding: 14px; }
+  .venue { flex: none; flex-direction: row; min-height: 0; gap: 6px; padding: 0 0 0 12px; align-self: flex-start; border-radius: 999px; }
+  .v-conf, .venue.review .v-conf { font-size: 13px; padding: 5px 0; }
+  .v-year { font-size: 13px; margin: 0; }
+  .v-track { margin: 0; width: auto; padding: 6px 10px; font-size: 10px; align-self: stretch; display: flex; align-items: center; }
   .date { flex-basis: 70px; }
 }
