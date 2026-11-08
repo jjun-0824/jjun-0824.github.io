@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
 .profile h1 .ko { font-size: 22px; font-weight: 500; color: var(--muted); margin-left: 6px; }
 .role { color: var(--muted); margin: 0 0 18px; font-weight: 500; }
 .profile p { margin: 0 0 12px; }
-.photo { width: 210px; height: 210px; object-fit: cover; border-radius: 50%; flex-shrink: 0; border: 1px solid var(--line); }
+.photo { width: 210px; height: 210px; object-fit: cover; border-radius: 12px; flex-shrink: 0; border: 1px solid var(--line); }
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .links a {
   font-size: 14px; padding: 5px 12px; border-radius: 999px;
