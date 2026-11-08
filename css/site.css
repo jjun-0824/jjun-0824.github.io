@@ -92,7 +92,15 @@ h2 {
   transition: border-color .15s, box-shadow .15s, transform .15s;
 }
 .pub:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 4px 14px rgba(0,0,0,.06); transform: translateY(-1px); }
-.pub-title { font-weight: 600; font-size: 16.5px; line-height: 1.4; }
+.pub-title { display: block; font-weight: 600; font-size: 16.5px; line-height: 1.4; color: var(--fg); }
+a.pub-title:hover { color: var(--accent); text-decoration: none; }
+.authors b { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.pub-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.pub-links a {
+  font-size: 13px; font-weight: 500; padding: 3px 11px; border-radius: 6px;
+  border: 1px solid var(--line); color: var(--fg);
+}
+.pub-links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 .authors { font-size: 15px; margin-top: 2px; }
 .pub-venue { color: var(--muted); font-size: 14.5px; }
 .tldr { margin: 6px 0 0; font-size: 14.5px; color: var(--muted); }

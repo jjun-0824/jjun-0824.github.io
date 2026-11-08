@@ -46,6 +46,7 @@ li { margin: 1px 0; }
 
 .pub { margin: 0 0 7px; break-inside: avoid; }
 .pub .t { font-weight: 700; }
+.pub .t a { color: var(--fg); }
 .pub .a { }
 .pub .a b { text-decoration: underline; text-underline-offset: 2px; }
 .pub .v { color: var(--muted); font-style: italic; }

@@ -1,6 +1,6 @@
 # jjun-0824.github.io
 
-Personal homepage of **Ijun Jang (장이준)** — https://jjun-0824.github.io
+Personal homepage of **Ijun Jang (장이준)**: https://jjun-0824.github.io
 
 ```
 index.html            homepage
